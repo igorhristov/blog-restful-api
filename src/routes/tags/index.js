@@ -1,20 +1,16 @@
-const router = require('express').Router();
-const tags = require('./tags');
-const slug = require('./slug');
-// const updateSlug = require('./updateSlug');
-const slugArticles = require('./slugArticles');
+const router = require("express").Router();
+const tags = require("./tags");
+const slug = require("./slug");
+const updateSlug = require("./updateSlug");
+const slugArticles = require("./slugArticles");
+
+router.route("/").get(tags);
 
 router
-  .route('/')
-  .get(tags)
-
-router
-  .route('/:slug')
+  .route("/:slug")
   .get(slug)
-  // .post(updateSlug)
+  .post(updateSlug);
 
-router
-  .route('/:slug/articles')
-  .get(slugArticles)
+router.route("/:slug/articles").get(slugArticles);
 
 module.exports = router;
