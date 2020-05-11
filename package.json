@@ -1,11 +1,6 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "NodeJs-restful-api",
   "version": "0.0.1",
   "description": "Node.js Blog RESTful API.",
-  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
